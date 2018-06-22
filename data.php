@@ -22,6 +22,4 @@ $portfolios = [
     $item_1, $item_2, $item_3
 ];
 
-var_dump($portfolios);
-
  ?>
