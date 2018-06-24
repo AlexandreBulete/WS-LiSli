@@ -19,33 +19,42 @@
     <script type="text/javascript">
     $(function() {
         $('.WS_lightbox').WS_lightbox({
-            backgroundImage : false
+            backgroundImage : true
         });
     });
     </script>
 </head>
 <body>
 
+<!-- The first model with background-image on <li> -->
 <h1 class="title">Demo - WS Lightbox | Alexandre Buleté</h1>
 <div class="grid">
-    <!-- <ul class="WS_Lightbox grid-content">
+    <ul class="WS_Lightbox grid-content">
         <?php foreach ($portfolios as $portfolio): ?>
             <li title="<?= $portfolio['title'] ?>"
                 style="background-image: url('images/<?= $portfolio['image'] ?>')">
                 <i class="fas fa-plus"></i>
             </li>
         <?php endforeach; ?>
-    </ul> -->
+    </ul>
 </div>
 
-<ul class="WS_Lightbox">
+
+<!-- The second model with <img> -->
+<!-- <ul class="WS_Lightbox">
     <?php foreach ($portfolios as $portfolio): ?>
         <li>
             <img title="<?= $portfolio['title'] ?>" src="images/<?= $portfolio['image'] ?>"
             style="max-width:200px;">
         </li>
     <?php endforeach; ?>
-</ul>
+</ul> -->
+
+
+<div class="credits">
+    <p>I Will Soon add a new open source for this grid model ;)</p>
+    <p><em>All this pictures are available on : <a href="https://pixabay.com/" target="_blank">pixabay</a></em></p>
+</div>
 
 </body>
 </html>

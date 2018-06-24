@@ -4,6 +4,7 @@
     padding-top: 10px;
 }
 .grid .grid-content {
+    list-style: none;
     height: 400px;
     width: 600px;
     margin: 0 auto;

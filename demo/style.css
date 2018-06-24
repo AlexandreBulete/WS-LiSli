@@ -18,7 +18,8 @@ h1, h2, h3, h4 {
     font-weight: lighter;
 }
 
-/*
-color : rgb(182, 215, 226);
-border-color: rgb(51, 137, 177);
-*/
+.credits {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+}
