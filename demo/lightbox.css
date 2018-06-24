@@ -1,0 +1,137 @@
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+ul li {
+    margin: 0px;
+}
+ul li img {
+    width: 200px;
+}
+
+#WS_Lightbox {
+    display: none;
+    z-index: 1001;
+}
+#WS_Lightbox .lightbox--bg {
+    position: fixed;
+    background-color: black;
+    background-color: rgba(0, 0, 0, .8);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1001;
+    text-align: center;
+}
+#WS_Lightbox .lightbox--bg .cross-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 24px;
+    z-index: 1;
+}
+#WS_Lightbox .lightbox--bg .cross-icon:hover {
+    cursor: pointer;
+    color: rgb(182, 215, 226);
+}
+#WS_Lightbox .lightbox--bg .lightbox--container {
+    width: 98%;
+    height: 81%;
+    margin-left: 1%;
+    margin-top: 1%;
+    overflow: hidden;
+}
+#WS_Lightbox .lightbox--bg .lightbox--container .lightbox--content {
+    /* display: grid; */
+    display: -webkit-inline-flex;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    background-size: contain;
+    justify-items: center;
+}
+#WS_Lightbox .lightbox--bg .lightbox--container .lightbox--content img.vertical {
+    height: 100%;
+    width: auto;
+}
+#WS_Lightbox .lightbox--bg .lightbox--container .lightbox--content img.horizontal {
+    width: 100%;
+    height: auto;
+}
+#WS_Lightbox .lightbox--bg .lightbox--container .lightbox--content .arrow-left, #WS_Lightbox .lightbox--bg .lightbox--container .lightbox--content .arrow-right {
+    position: absolute;
+    font-size: 40px;
+    display: grid;
+    height: 300px;
+    width: 100px;
+    align-items: center;
+    justify-items: center;
+    color: white;
+    opacity: 0.5;
+    transition: all .5s ease;
+}
+#WS_Lightbox .lightbox--bg .lightbox--container .lightbox--content .arrow-left:hover, #WS_Lightbox .lightbox--bg .lightbox--container .lightbox--content .arrow-right:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    opacity: 1;
+}
+#WS_Lightbox .lightbox--bg .lightbox--container .lightbox--content .arrow-left {
+    left: 1%;
+}
+#WS_Lightbox .lightbox--bg .lightbox--container .lightbox--content .arrow-right {
+    right: 1%;
+}
+#WS_Lightbox .lightbox--bg .lightbox--banner {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+#WS_Lightbox .lightbox--bg .lightbox--banner .banner-title {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: black;
+    background-color: rgba(0, 0, 0, .2);
+}
+#WS_Lightbox .lightbox--bg .lightbox--banner .project-title {
+    color: white;
+    margin: 0;
+    text-align: left;
+    margin: 10px 20px 5px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    line-height: 2.2;
+    font-weight: lighter;
+}
+#WS_Lightbox .lightbox--bg .lightbox--banner .count {
+    color: white;
+    grid-column-start: 4;
+    justify-self: right;
+    margin-right: 20px;
+}
+#WS_Lightbox .lightbox--bg .lightbox--navbar {
+    padding: 10px 0;
+    width: 100%;
+    background-color: black;
+    align-items: center;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+}
+#WS_Lightbox .lightbox--bg .lightbox--navbar .items {
+    flex: 0 0 auto;
+    height: 80px;
+    width: 130px;
+    background-size: cover;
+    background-position: center;
+    margin: 0 10px;
+    border: 2px solid white;
+    border-radius: 3px;
+}
+#WS_Lightbox .lightbox--bg .lightbox--navbar .items:hover {
+    cursor: pointer;
+    border-color: rgb(51, 137, 177);
+    transition: all .5s ease;
+}

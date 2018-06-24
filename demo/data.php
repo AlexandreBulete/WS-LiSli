@@ -18,8 +18,12 @@ $item_3 = [
     'position'  => 3
 ];
 
-$portfolios = [
-    $item_1, $item_2, $item_3
+$item_4 = [
+    'title'     => 'Crea 4',
+    'image'     => '04.jpg',
+    'position'  => 4
 ];
+
+$portfolios = [ $item_1, $item_2, $item_3, $item_4 ];
 
  ?>
