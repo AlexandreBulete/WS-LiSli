@@ -8,12 +8,14 @@
 
         }, options);
 
-        var $element = $('.WS_Lightbox li');
+        var $element = this.find('li');
+
+        console.log($element);
 
         return this.each(function() {
             putOnTheDOM();
             init();
-            // displayItemsOnNavbar();
+
             $navbarLength = $('.lightbox--navbar li').length - 1;
             $lightbox = $('#WS_Lightbox ');
 
@@ -22,16 +24,15 @@
                 overFlowGrid();
             }
 
-
             displayLightbox();
+            removeLightbox();
 
             switchWithNavBar();
-
             switchWithArrow('arrow-left');
             switchWithArrow('arrow-right');
             switchWithKeyBoard();
 
-            removeLightbox();
+
         });
 
         function displayLightbox() {
@@ -49,9 +50,7 @@
                         break;
                 }
 
-                if ( !$titleSelected ) {
-                    $titleSelected = "";
-                }
+                if ( !$titleSelected ) { $titleSelected = ""; }
 
                 var $index = parseInt($(this).attr('data-position')) - 1;
 
@@ -173,20 +172,15 @@
                     $(this).css('border-color', 'white');
                 }
             });
-
-
         }
 
 
 ////////////////////////////////////// PUT ON THE DOM ////////////////////////////////////
         function init() {
-            $('.WS_Lightbox li').each(function(index) {
+            $element.each(function(index) {
                 index ++;
                 $(this).addClass('items item-'+index).attr('data-position', index);
-            });
 
-            var $items = $('.WS_Lightbox .items');
-            $items.each(function() {
                 switch ( settings.backgroundImage ) {
                     case true:
                         var $itemSrc = "background-image:" + $(this).css('background-image');
@@ -216,6 +210,7 @@
                         "</li>"
                     );
             });
+
         }
         function putOnTheDOM() {
             $('body').append(
@@ -245,10 +240,10 @@
         }
 
         function overFlowGrid() {
-            var $items = $('.WS_Lightbox .items');
+            var $items = $element;
             var $limit = 3;
             var $rest = $items.length - $limit;
-            var $elem = $('.WS_Lightbox .item-'+$limit);
+            var $elem = $element.siblings(('.item-'+$limit));
             if ( $rest > 0 ) {
                 $elem
                 .append(

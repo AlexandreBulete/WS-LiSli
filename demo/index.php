@@ -18,7 +18,7 @@
     <script src="lightbox.js" defer></script>
     <script type="text/javascript">
     $(function() {
-        $('.WS_lightbox').WS_lightbox({
+        $('#my_lightbox').WS_lightbox({
             backgroundImage : true
         });
     });
@@ -29,7 +29,7 @@
 <!-- The first model with background-image on <li> -->
 <h1 class="title">Demo - WS Lightbox | Alexandre Buleté</h1>
 <div class="grid">
-    <ul class="WS_Lightbox grid-content">
+    <ul class="grid-content" id="my_lightbox">
         <?php foreach ($portfolios as $portfolio): ?>
             <li title="<?= $portfolio['title'] ?>"
                 style="background-image: url('images/<?= $portfolio['image'] ?>')">
@@ -41,7 +41,7 @@
 
 
 <!-- The second model with <img> -->
-<!-- <ul class="WS_Lightbox">
+<!-- <ul class="WS_Lightbox_bis">
     <?php foreach ($portfolios as $portfolio): ?>
         <li>
             <img title="<?= $portfolio['title'] ?>" src="images/<?= $portfolio['image'] ?>"
