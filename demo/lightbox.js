@@ -4,7 +4,11 @@
     {
         var settings = $.extend({
             color : 'rgb(29, 124, 159)',
-            backgroundImage : false
+            backgroundImage : false,
+            disableArrow : false,
+            arrowStyle : 'style_1',
+            arrowColor : 'white',
+            template : 'dark'
 
         }, options);
 
@@ -164,18 +168,10 @@
             return $img;
         }
 
-        function addStyle($elem) {
-            $('.lightbox--navbar .items').each(function() {
-                if ( $(this).attr('data-position') == $elem.attr('data-position') ) {
-                    $(this).css('border-color', settings.color);
-                } else {
-                    $(this).css('border-color', 'white');
-                }
-            });
-        }
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////// PUT ON THE DOM ////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-////////////////////////////////////// PUT ON THE DOM ////////////////////////////////////
         function init() {
             $element.each(function(index) {
                 index ++;
@@ -222,8 +218,8 @@
                                     "<i class='far fa-times-circle'></i>" +
                                 "</div>" +
                                 "<img>" +
-                                "<span class='arrow-left'><i class='fas fa-angle-left'></i></span>" +
-                                "<span class='arrow-right'><i class='fas fa-angle-right'></i></span>" +
+                                "<span class='arrow-left'><i id='WS-lb-icon-left' class='fas fa-angle-left'></i></span>" +
+                                "<span class='arrow-right'><i id='WS-lb-icon-right' class='fas fa-angle-right'></i></span>" +
                             "</div>" +
                         "</div>" +
                         "<div class='lightbox--banner'>" +
@@ -237,6 +233,9 @@
                     "</div>" +
                 "</div>"
             );
+            if (settings.disableArrow) {
+                $('#WS_lightbox .arrow-left, #WS_lightbox .arrow-right').css('display', 'none');
+            }
         }
 
         function overFlowGrid() {
@@ -258,5 +257,63 @@
             }
         }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////// STYLES ////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        function addStyle($elem) {
+            var $arrowLeft = $('#WS_Lightbox .arrow-left #WS-lb-icon-left');
+            var $arrowRight = $('#WS_Lightbox .arrow-right #WS-lb-icon-right');
+
+
+            switch (settings.arrowStyle) {
+                case 'style 1':
+                    $arrowLeft.removeClass().addClass('fas fa-arrow-left');
+                    $arrowRight.removeClass().addClass('fas fa-arrow-right');
+                    break;
+                case 'style_2' :
+                    $arrowLeft.removeClass().addClass('fas fa-caret-left');
+                    $arrowRight.removeClass().addClass('fas fa-caret-right');
+                    break;
+                case 'style_3' :
+                    $arrowLeft.removeClass().addClass('fas fa-chevron-circle-left');
+                    $arrowRight.removeClass().addClass('fas fa-chevron-circle-right');
+                    break;
+                case 'style_4' :
+                    $arrowLeft.removeClass().addClass('fas fa-angle-left');
+                    $arrowRight.removeClass().addClass('fas fa-angle-right');
+                    break;
+            }
+
+            $arrowLeft.css('color', settings.arrowColor);
+            $arrowLeft.css('color', settings.arrowColor);
+
+            switch (settings.template) {
+                case 'default':
+                case 'cinema':
+                    break;
+                case 'heaven' :
+                    var template = {
+                        border_navbar_items : 'lightgrey',
+                        cross : 'lightgrey'
+                    }
+                    $('.lightbox--bg').css('background-color', 'white');
+                    $('.lightbox--bg').css('background-color', 'rgba(255, 255, 255, .6)');
+                    $('.lightbox--banner .banner-title').css('background-color', 'rgba(255, 255, 255, .2)').css('box-shadow', '0 -2px 5px rgba(0, 0, 0, 0.1)');
+                    $('.lightbox--banner .banner-title .project-title, .lightbox--banner .banner-title .count').css('color', 'darkgrey');
+                    $('.lightbox--navbar').css('background-color', 'white').css('box-shadow', '0 -2px 5px rgba(0,0,0, 0.1)');
+                    $('.lightbox--navbar .items').css('border-color', 'grey');
+                    $('.lightbox--content .cross-icon').css('color', template.cross);
+                    break;
+            }
+
+            $('.lightbox--navbar .items').each(function() {
+                if ( $(this).attr('data-position') == $elem.attr('data-position') ) {
+                    $(this).css('border-color', settings.color);
+                } else {
+                    $(this).css('border-color', template.border_navbar_items);
+                }
+            });
+        }
     };
 })(jQuery);

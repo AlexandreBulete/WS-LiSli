@@ -19,7 +19,10 @@
     <script type="text/javascript">
     $(function() {
         $('#my_lightbox').WS_lightbox({
-            backgroundImage : true
+            backgroundImage : true,
+            disableArrow : false,
+            arrowStyle : 'style_4',
+            template : 'heaven'
         });
     });
     </script>
