@@ -14,16 +14,17 @@
         integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
         crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <!-- <link rel="stylesheet" href="grid.css"> -->
     <script src="lightbox.js" defer></script>
     <script type="text/javascript">
     $(function() {
-        $('#my_lightbox_bis').WS_lightbox({
-            backgroundImage : false,
+        $('#my_lightbox').WS_lightbox({
+            backgroundImage : true,
             disableArrow : false,
             arrowStyle : 'style_4',
             template : 'cinema',
-            count : true
+            count : false,
+            crossStyle : 'style_4',
+            arrowHover : 'rectangle'
         });
     });
     </script>
@@ -32,7 +33,7 @@
 
 <!-- The first model with background-image on <li> -->
 <h1 class="title">Demo - WS Lightbox | Alexandre Buleté</h1>
-<!-- <div class="grid">
+<div class="grid">
     <ul class="grid-content" id="my_lightbox">
         <?php foreach ($portfolios as $portfolio): ?>
             <li title="<?= $portfolio['title'] ?>"
@@ -41,16 +42,16 @@
             </li>
         <?php endforeach; ?>
     </ul>
-</div> -->
+</div>
 
 
 <!-- The second model with <img> -->
-<ul id="my_lightbox_bis" class="grid_bis">
+<!-- <ul id="my_lightbox_bis" class="grid_bis">
     <?php foreach ($portfolios as $portfolio): ?>
         <li>
             <img title="<?= $portfolio['title'] ?>" src="images/<?= $portfolio['image'] ?>">
         </li>
-    <?php endforeach; ?>
+    <?php endforeach; ?> -->
 </ul>
 
 

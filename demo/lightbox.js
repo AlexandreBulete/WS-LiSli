@@ -8,6 +8,8 @@
             disableArrow : false,
             arrowStyle : 'style_1',
             arrowColor : 'white',
+            arrowHover : 'rectangle',
+            crossStyle : 'style_1',
             template : 'dark',
             banner : true,
             title : true,
@@ -157,7 +159,7 @@
             .fadeOut(400, function() {
                 setTimeout(function() {
                     checkImage($elem.attr('src', $data));
-                }, 10);
+                }, 20);
             })
             .fadeIn(400);
         };
@@ -219,7 +221,7 @@
                         "<div class='lightbox--container'>" +
                             "<div class='lightbox--content'>" +
                                 "<div class='cross-icon'>" +
-                                    "<i class='far fa-times-circle'></i>" +
+                                    "<i id='WS-lb-cross-icon' class='far fa-times-circle'></i>" +
                                 "</div>" +
                                 "<img>" +
                                 "<span class='arrow-left'><i id='WS-lb-icon-left' class='fas fa-angle-left'></i></span>" +
@@ -277,7 +279,7 @@
         function addStyle($elem) {
             var $arrowLeft = $('#WS_Lightbox .arrow-left #WS-lb-icon-left');
             var $arrowRight = $('#WS_Lightbox .arrow-right #WS-lb-icon-right');
-
+            var $cross = $('#WS_Lightbox .lightbox--content .cross-icon #WS-lb-cross-icon');
 
             switch (settings.arrowStyle) {
                 case 'style_1':
@@ -298,17 +300,40 @@
                     break;
             }
 
+            switch (settings.crossStyle) {
+                case 'style_1':
+                    $cross.removeClass().addClass('fas fa-times');
+                    break;
+                case 'style_2':
+                    $cross.removeClass().addClass('fas fa-times-circle');
+                    break;
+                case 'style_3':
+                    $cross.removeClass().addClass('far fa-times-circle');
+                    break;
+                case 'style_3':
+                    $cross.removeClass().addClass('fas fa-window-close');
+                    break;
+                case 'style_4':
+                    $cross.removeClass().addClass('far fa-window-close');
+                    break;
+
+            }
+
             $arrowLeft.css('color', settings.arrowColor);
             $arrowLeft.css('color', settings.arrowColor);
 
             switch (settings.template) {
-                case 'default':
-                case 'cinema':
+                case 'default': case 'cinema':
+                    var template = {
+                        border_navbar_items : 'white',
+                        cross : 'white',
+                        title : 'white'
+                    }
                     break;
                 case 'heaven' :
                     var template = {
                         border_navbar_items : 'lightgrey',
-                        cross : 'white',
+                        cross : 'grey',
                         title : '#525252'
                     }
                     $('.lightbox--bg').css('background-color', 'white');
@@ -320,6 +345,34 @@
                     $('.lightbox--content .cross-icon').css('color', template.cross);
                     break;
             }
+
+            switch ( settings.arrowHover ) {
+                case 'none' :
+                    $arrowLeft.parent().addClass('none-hover');
+                    $arrowRight.parent().addClass('none-hover');
+                    break;
+                case 'rectangle':
+                    $arrowLeft.parent().addClass('rectangle-hover');
+                    $arrowRight.parent().addClass('rectangle-hover');
+                    break;
+                case 'square':
+                    $arrowLeft.parent().addClass('square-hover');
+                    $arrowRight.parent().addClass('square-hover');
+                    break;
+                case 'circle':
+                    $arrowLeft.parent().addClass('circle-hover');
+                    $arrowRight.parent().addClass('circle-hover');
+                    break;
+            }
+
+            $('.lightbox--content .cross-icon').on({
+                mouseenter: function () {
+                    $(this).css('color', settings.color);
+                },
+                mouseleave: function () {
+                    $(this).css('color', template.cross);
+                }
+            });
 
             $('.lightbox--navbar .items').each(function() {
                 if ( $(this).attr('data-position') == $elem.attr('data-position') ) {

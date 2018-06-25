@@ -133,3 +133,29 @@
     border-color: rgb(51, 137, 177);
     transition: all .5s ease;
 }
+
+#WS_Lightbox .lightbox--bg .lightbox--container .lightbox--content .arrow-left.rectangle-hover,
+#WS_Lightbox .lightbox--bg .lightbox--container .lightbox--content .arrow-right.rectangle-hover {
+    height: 300px;
+    width: 100px;
+}
+
+#WS_Lightbox .lightbox--bg .lightbox--container .lightbox--content .arrow-left.none-hover:hover,
+#WS_Lightbox .lightbox--bg .lightbox--container .lightbox--content .arrow-right.none-hover:hover {
+    background: none;
+    cursor: pointer;
+    opacity: 1;
+}
+
+#WS_Lightbox .lightbox--bg .lightbox--container .lightbox--content .arrow-left.square-hover,
+#WS_Lightbox .lightbox--bg .lightbox--container .lightbox--content .arrow-right.square-hover {
+    height: 100px;
+    width: 100px;
+}
+
+#WS_Lightbox .lightbox--bg .lightbox--container .lightbox--content .arrow-left.circle-hover,
+#WS_Lightbox .lightbox--bg .lightbox--container .lightbox--content .arrow-right.circle-hover {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+}
