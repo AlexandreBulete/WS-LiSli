@@ -8,13 +8,14 @@
             disableArrow : false,
             arrowStyle : 'style_1',
             arrowColor : 'white',
-            template : 'dark'
+            template : 'dark',
+            banner : true,
+            title : true,
+            count : true
 
         }, options);
 
         var $element = this.find('li');
-
-        console.log($element);
 
         return this.each(function() {
             putOnTheDOM();
@@ -24,7 +25,6 @@
             $lightbox = $('#WS_Lightbox ');
 
             if ( settings.backgroundImage ) {
-
                 overFlowGrid();
             }
 
@@ -54,7 +54,10 @@
                         break;
                 }
 
-                if ( !$titleSelected ) { $titleSelected = ""; }
+                if ( !$titleSelected || !settings.title )
+                {
+                    $titleSelected = "";
+                }
 
                 var $index = parseInt($(this).attr('data-position')) - 1;
 
@@ -193,7 +196,8 @@
                         break;
                 }
 
-                if ( !$itemTitle ) {
+                if ( !$itemTitle || !settings.title )
+                {
                     $itemTitle = "";
                 }
 
@@ -236,6 +240,15 @@
             if (settings.disableArrow) {
                 $('#WS_lightbox .arrow-left, #WS_lightbox .arrow-right').css('display', 'none');
             }
+            if ( !settings.banner ) {
+                $('#WS_lightbox .banner-title').css('display', 'none');
+            }
+            if ( !settings.count ) {
+                $('#WS_lightbox .banner-title .count').css('display', 'none');
+            }
+            if ( !settings.title ) {
+                $('#WS_lightbox .banner-title .project-title').css('display', 'none');
+            }
         }
 
         function overFlowGrid() {
@@ -267,7 +280,7 @@
 
 
             switch (settings.arrowStyle) {
-                case 'style 1':
+                case 'style_1':
                     $arrowLeft.removeClass().addClass('fas fa-arrow-left');
                     $arrowRight.removeClass().addClass('fas fa-arrow-right');
                     break;
@@ -295,12 +308,13 @@
                 case 'heaven' :
                     var template = {
                         border_navbar_items : 'lightgrey',
-                        cross : 'lightgrey'
+                        cross : 'white',
+                        title : '#525252'
                     }
                     $('.lightbox--bg').css('background-color', 'white');
-                    $('.lightbox--bg').css('background-color', 'rgba(255, 255, 255, .6)');
-                    $('.lightbox--banner .banner-title').css('background-color', 'rgba(255, 255, 255, .2)').css('box-shadow', '0 -2px 5px rgba(0, 0, 0, 0.1)');
-                    $('.lightbox--banner .banner-title .project-title, .lightbox--banner .banner-title .count').css('color', 'darkgrey');
+                    $('.lightbox--bg').css('background-color', 'rgba(255, 255, 255, .8)');
+                    $('.lightbox--banner .banner-title').css('background-color', 'rgba(255, 255, 255, .5)').css('box-shadow', '0 -2px 5px rgba(0, 0, 0, 0.1)');
+                    $('.lightbox--banner .banner-title .project-title, .lightbox--banner .banner-title .count').css('color', template.title);
                     $('.lightbox--navbar').css('background-color', 'white').css('box-shadow', '0 -2px 5px rgba(0,0,0, 0.1)');
                     $('.lightbox--navbar .items').css('border-color', 'grey');
                     $('.lightbox--content .cross-icon').css('color', template.cross);

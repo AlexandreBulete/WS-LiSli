@@ -87,3 +87,22 @@
     grid-row-start: 3;
     grid-row-end: 5;
 }
+
+.grid_bis {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    column-gap : 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0 50px;
+}
+.grid_bis li {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.grid_bis li img {
+    width: 100%;
+}
