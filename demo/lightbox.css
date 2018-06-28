@@ -22,6 +22,7 @@
     z-index: 1;
 }
 #WS_Lightbox .lightbox--bg .cross-icon:hover {
+    transition: all .5s ease;
     cursor: pointer;
     color: rgb(182, 215, 226);
 }
@@ -77,6 +78,24 @@
     width: 100%;
     bottom: 0;
 }
+#WS_Lightbox .lightbox--bg .lightbox--banner  .btn-toggle-banner {
+    color: rgba(255,255,255, .6);
+    font-size: 20px;
+    position: absolute;
+    left: 10px;
+    top: -50px;
+    height: 50px;
+    width: 50px;
+    display: grid;
+    align-items: center;
+    background: rgba(0,0,0, .2);
+    transition: all .5s ease;
+}
+#WS_Lightbox .lightbox--bg .lightbox--banner  .btn-toggle-banner:hover {
+    cursor : pointer;
+    background-color: rgba(0,0,0, .5);
+    color: white
+}
 #WS_Lightbox .lightbox--bg .lightbox--banner .banner-title {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -127,11 +146,12 @@
     margin: 0 10px;
     border: 2px solid white;
     border-radius: 3px;
+    transition: all .5s ease;
 }
 #WS_Lightbox .lightbox--bg .lightbox--navbar .items:hover {
     cursor: pointer;
     border-color: rgb(51, 137, 177);
-    transition: all .5s ease;
+
 }
 
 #WS_Lightbox .lightbox--bg .lightbox--container .lightbox--content .arrow-left.rectangle-hover,
@@ -158,4 +178,31 @@
     height: 100px;
     width: 100px;
     border-radius: 100%;
+}
+
+.play {
+    position: absolute;
+    color: white;
+    bottom: 10px;
+    right: 10px;
+    font-size: 20px;
+    text-shadow: 0 0 10px black;
+}
+.play:hover {
+    cursor: pointer;
+}
+
+
+
+/* .lightbox--banner {
+    transition: all .5s ease;
+} */
+
+.rotate-180 {
+    transition: all .5s ease;
+    transform: rotate(180deg);
+}
+.rotate-0 {
+    transition: all .5s ease;
+    transform: rotate(0);
 }

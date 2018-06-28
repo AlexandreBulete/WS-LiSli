@@ -20,12 +20,17 @@
     $(function() {
         $('#my_lightbox_bis').WS_lightbox({
             backgroundImage : false,
-            disableArrow : false,
+            // disableArrow : false,
             arrowStyle : 'style_4',
             template : 'cinema',
-            count : true,
+            // count : true,
             crossStyle : 'style_3',
-            arrowHover : 'rectangle'
+            arrowHover : 'rectangle',
+            bannerSelector : false,
+            // bannerCaption : false,
+            // overlay : false,
+            // autoPlay : true
+            animationSpeed : 800
         });
     });
     </script>
