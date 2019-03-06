@@ -8,7 +8,7 @@ This Plugin can be used with a list including images or directly on the li style
 
 # Screenshot of the Lightbox Display 
 
-![grids presentation](https://github.com/AlexandreBulete/WS-Lightbox/blob/master/screenshots/screenshot-display.pngg)
+![Screenshot Presentation](https://github.com/AlexandreBulete/WS-Lightbox/blob/master/screenshots/screenshot-display.png)
 
 <hr>
 
