@@ -1,25 +1,27 @@
 {
-  "name": "@AlexandreBulete/WS-Lightbox",
-  "description": "A jQuery Plugin for display a Lightbox in your projects. Can be used on a list with image or with background-image elements.",
+  "name": "@AlexandreBulete/WS-LiSli",
+  "description": "A jQuery Plugin for display a Lightbox Slider in your projects. Can be used on a list with image.",
   "version": "0.1.0",
-  "homepage": "https://github.com/AlexandreBulete/WS-Lightbox",
-  "main": "./dist/WS-lightbox.js",
+  "homepage": "https://github.com/AlexandreBulete/WS-LiSli",
+  "main": "./dist/WS-LiSli.js",
   "author": "Alexandre Buleté <bulete.alexandre@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AlexandreBulete/WS-Lightbox.git"
+    "url": "https://github.com/AlexandreBulete/WS-LiSli.git"
   },
   "peerDependencies": {
     "jquery": ">=1.9.0"
   },
-  "keywords": ["lightbox", "gallery", "portfolio", "jQuery", "plugin", "slideshow"],
+  "keywords": [
+    "walkerspider", "WS", "walker", "spider", 
+    "LiSli", "lightbox", "gallery", "portfolio", "jQuery", "plugin", "slideshow", "slider", "slide"],
   "bugs": {
-    "url": "https://github.com/AlexandreBulete/WS-Lightbox/issues"
+    "url": "https://github.com/AlexandreBulete/WS-LiSli/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/AlexandreBulete/WS-Lightbox/blob/master/LICENSE"
+      "url": "https://github.com/AlexandreBulete/WS-LiSli/blob/master/LICENSE"
     }
   ]
 }

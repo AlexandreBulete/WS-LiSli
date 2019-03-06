@@ -1,36 +1,24 @@
-# WS Lightbox | Alexandre Buleté
+# WS-LiSli | A LightBox Slider Plugin | Alexandre Buleté
 
-A jQuery Plugin for display a Lightbox in your projects 
+WS-LiSli jQuery Plugin for display a Lightbox-Slider in your projects 
 
 This Plugin can be used with a list including images or directly on the li style "background-image".
 
 <hr>
 
-![grids presentation](https://github.com/AlexandreBulete/WS-Lightbox/blob/master/screenshots/screenshot-grids.jpg)
+# Screenshot of the Lightbox Display 
 
-
-<hr>
-
-
-# Screenshot of the Lightbox Display (with 'Cinema' Template)
-
-![grids presentation](https://github.com/AlexandreBulete/WS-Lightbox/blob/master/screenshots/screenshot-lightbox-theme-cinema.jpg)
-
+![grids presentation](https://github.com/AlexandreBulete/WS-Lightbox/blob/master/screenshots/screenshot-display.pngg)
 
 <hr>
 
-
-# You have some options for customize this lightbox : 
+# You have some options for customize this lightbox slider : 
 <ul>
-	<li><b>backgroundImage :</b> False by default. Change it on true if you use background-image (cf demo 1)</li>
-	<li><b>color :</b> Change the primary color of your lightbox (hover buttons, selected image etc...)</li>
-	<li><b>disableArrow :</b> True by default. For enable/disable arrows</li>
-	<li><b>arrowStyle :</b> Change arrow style (4 styles available) write like this : "style_X"</li>
-	<li><b>arrowColor :</b> Change arrow color.</li>
-	<li><b>arrowHover :</b> Change arrow Hover. ('none', 'circle', 'square', 'rectangle')</li>
-	<li><b>crossStyle :</b> Change cross style (4 styles available) write like this : "style_X"</li>
-	<li><b>template :</b> 2 templates available : 'cinema' (or 'default') and 'heaven'</li>
-	<li><b>banner :</b> Enable/Disable banner (with title and count)</li>
-	<li><b>title :</b> Enable/Disable title image</li>
-	<li><b>count :</b> Enable/Disable count</li>
+	<li><b>enable : </b> Array. (accepts values 'arrows' and 'close')</li>
+	<li><b>buttons : </b> Object. Change your button style (size, style, colr, color_icon, border_width, border_color, opacity, hover_opacity)</li>
+	<li><b>arrows : </b>Object. Change arrows style (position, style, icon_style, icon_size, opacity, hover_effect, hover_opacity)</li>
+	<li><b>background : </b>Object. (filter, opacity)</li>
+	<li><b>image :</b> Object (border_radius, border_color, border_width, bg).</li>
+	<li><b>display_velocity : </b> Change display velocity (accepts 'low', 'normal', 'fast' and decimal values).</li>
+	<li><b>slide_velocity :</b> Change slide velocity (accepts 'low', 'normal', 'fast' and decimal values).</li>
 </ul>

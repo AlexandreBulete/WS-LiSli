@@ -1,0 +1,22 @@
+.grid {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    column-gap : 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0 50px;
+    li {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 10px;
+        transition: all .5s ease;
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.025);
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
