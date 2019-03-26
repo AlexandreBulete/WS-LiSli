@@ -16,16 +16,7 @@
     <link rel="stylesheet" href="css/style.css">
 
     <script src="es2015/lightbox.js" defer></script>
-    <script type="text/javascript">
-    $(function() {
-        $('#WS-LiSli').WS_lightbox_free({
-
-        });
-    });
-				
     
-
-    </script>
 </head>
 <body>
     <?php require 'data.php'; ?>
@@ -39,6 +30,13 @@
             <?php endforeach; ?>
         </ul>
     </body>
+    <script type="text/javascript">
+    $(function() {
+        $('#WS-LiSli').WS_lightbox_free({
+            // your custom params here
+        });
+    });
+    </script>
 </html>
 
 
