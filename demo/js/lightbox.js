@@ -58,7 +58,7 @@
                 // let base_url = window.location.origin;
                 // let base_url = window.location.href;
                 $.ajaxSetup({'cache':true});
-                let base_url = 'https://cdn.jsdelivr.net/gh/alexandrebulete/WS-ScroLi/dist';
+                let base_url = 'https://cdn.jsdelivr.net/gh/alexandrebulete/ws-lisli/dist';
 
                 $(this).find('li').each(function(index) {
                     $(this).attr('data-item-order', index+1);

@@ -35,28 +35,28 @@
         $('#WS-LiSli').WS_lightbox_free({
             'enable' : ['close', 'arrows'],
             buttons : {
-                size          : 30,
+                size          : 40,
                 style         : 'square', // ( default, square, circle, rounded )
                 color         : 'black',
                 color_icon    : 'white',
-                border_width  : '',
-                border_color  : 'red',
+                border_width  : 0,
+                border_color  : '',
                 opacity       : .5,
                 hover_opacity : 1
             },
             arrows : {
-                position      : 'outside', // ( inside, outside, attached )
+                position      : 'attached', // ( inside, outside, attached )
                 style         : 'svelt', // (default, square, circle, rounded, svelt)
                 icon_style    : 'angle', // (default, caret, angle, chevron)
-                icon_size     : 16,
+                icon_size     : 20,
                 opacity       : .5,
                 hover_effect  : 'shrink', // (zoom, shrink, translate)
                 hover_opacity : .8
             },
             image : {
-                border_radius : 10,
-                border_color : 'green',
-                border_width : 3,
+                border_radius : 0,
+                border_color : '',
+                border_width : 0,
                 bg : 'none'
             },
             background : {
