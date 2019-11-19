@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="css/style.css">
 
     <script src="es2015/lightbox.js" defer></script>
-    
 </head>
 <body>
     <?php require 'data.php'; ?>
@@ -30,11 +29,44 @@
             <?php endforeach; ?>
         </ul>
     </body>
+
     <script type="text/javascript">
     $(function() {
         $('#WS-LiSli').WS_lightbox_free({
-            // your custom params here
+            'enable' : ['close', 'arrows'],
+            buttons : {
+                size          : 30,
+                style         : 'square', // ( default, square, circle, rounded )
+                color         : 'black',
+                color_icon    : 'white',
+                border_width  : '',
+                border_color  : 'red',
+                opacity       : .5,
+                hover_opacity : 1
+            },
+            arrows : {
+                position      : 'outside', // ( inside, outside, attached )
+                style         : 'svelt', // (default, square, circle, rounded, svelt)
+                icon_style    : 'angle', // (default, caret, angle, chevron)
+                icon_size     : 16,
+                opacity       : .5,
+                hover_effect  : 'shrink', // (zoom, shrink, translate)
+                hover_opacity : .8
+            },
+            image : {
+                border_radius : 10,
+                border_color : 'green',
+                border_width : 3,
+                bg : 'none'
+            },
+            background : {
+                filter : 'image',
+                opacity : .5
+            },
+            display_velocity : 'low',
+            slide_velocity : 'fast'
         });
+        
     });
     </script>
 </html>

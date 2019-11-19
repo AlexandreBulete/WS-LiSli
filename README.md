@@ -12,8 +12,10 @@ This Plugin can be used with a list including images or directly on the li style
 
 <hr>
 
-# You have some options for customize this lightbox slider : 
-<ul>
+<a href="https://walkerspider.com/plugins/ws-lisli">! Documentation and Demo here !</a>
+
+<!-- # You have some options for customize this lightbox slider :  -->
+<!-- <ul>
 	<li><b>enable : </b> Array. (accepts values 'arrows' and 'close')</li>
 	<li><b>buttons : </b> Object. Change your button style (size, style, colr, color_icon, border_width, border_color, opacity, hover_opacity)</li>
 	<li><b>arrows : </b>Object. Change arrows style (position, style, icon_style, icon_size, opacity, hover_effect, hover_opacity)</li>
@@ -21,4 +23,4 @@ This Plugin can be used with a list including images or directly on the li style
 	<li><b>image :</b> Object (border_radius, border_color, border_width, bg).</li>
 	<li><b>display_velocity : </b> Change display velocity (accepts 'low', 'normal', 'fast' and decimal values).</li>
 	<li><b>slide_velocity :</b> Change slide velocity (accepts 'low', 'normal', 'fast' and decimal values).</li>
-</ul>
+</ul> -->
