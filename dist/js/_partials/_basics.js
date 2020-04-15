@@ -1,4 +1,7 @@
-function slideFunctions($app, options, $_THIS) {
+export function basics($app, options, $_THIS) {
+    // wrap the img tag in a div (class : .img--container)
+    wrapImgTag($_THIS);
+
     displayLightbox($app, options, $_THIS);
     hideLightbox($app, options);
 
@@ -8,15 +11,20 @@ function slideFunctions($app, options, $_THIS) {
     keySlideControls($app, options);
 }
 
+function wrapImgTag($_THIS) {
+    $_THIS.find('li img').wrap('<div class="img--container"></div>');
+}
+
 function displayLightbox($app, options, $_THIS) {
     // conversVelocity(options);
-    $_THIS.find('li img').click(function() {
+    $_THIS.find('li .img--container').click(function() {
+        let $img = $(this).find('img');
         $('body').addClass('WS-lightbox--opened');
-        let $getSrc = $(this).attr('src');
-        let $getTitle = $(this).attr('title');
-        let $getDescription = $(this).attr('data-description');
+        let $getSrc = $img.attr('src');
+        let $getTitle = $img.attr('title');
+        let $getDescription = $img.attr('data-description');
         let $getLength = $_THIS.find('li').length;
-        let $getCurrentOrder = $(this).attr('data-item-order');
+        let $getCurrentOrder = $img.attr('data-item-order');
 
         $app.fadeIn( options.display_velocity ).css('display', 'grid');
 

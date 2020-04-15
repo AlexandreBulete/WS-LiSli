@@ -1,7 +1,10 @@
+import { stylizer } from './_partials/_stylizer.js';
+import { basics } from './_partials/_basics.js';
 ($ =>
     {   
         $.fn.WS_lightbox_free = function(options)
-        {            
+        {   
+            // let base_url = 'https://cdn.jsdelivr.net/gh/alexandrebulete/ws-lisli/dist';
             createBaseDOM();
             const $app = $('.WS-lightbox');
             const $container = $('.WS-lightbox--container');
@@ -55,10 +58,6 @@
                         options.arrows.icon_style = value;
                     }
                 }); 
-                // let base_url = window.location.origin;
-                // let base_url = window.location.href;
-                $.ajaxSetup({'cache':true});
-                let base_url = 'https://cdn.jsdelivr.net/gh/alexandrebulete/ws-lisli/dist';
 
                 $(this).find('li').each(function(index) {
                     $(this).attr('data-item-order', index+1);
@@ -70,18 +69,14 @@
                 preloader();
 
                 // basics mechanics
-                $.getScript( `${base_url}/js/_partials/_basics.js` , function() {
-                    slideFunctions($app, options, $_THIS);
-                });
+                basics($app, options, $_THIS)
                 
                 pos_Elements();
                 
                 // statusBoxPosition();
                
                 // stylizer
-                $.getScript( `${base_url}/js/_partials/_stylizer.js` , function() {
-                    styleFunctions($app, options, base_url);
-                });
+                stylizer($app, options);
                 
             });
     

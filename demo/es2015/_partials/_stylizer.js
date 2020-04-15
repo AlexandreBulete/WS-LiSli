@@ -1,7 +1,8 @@
-function styleFunctions($app, options, base_url) {
+import { cc } from './_colors-converter.js';
+export function stylizer($app, options) {
     btnStyle($app, options);
     arrowStyle($app, options);
-    bgStyle($app, options, base_url);
+    bgStyle($app, options);
     imageContainer($app, options);
 }
 
@@ -85,12 +86,16 @@ function bgStyle($app, options, base_url) {
             </span>
         `);
     } else if (typeof options.background.filter === 'string' || options.background.filter instanceof String) {
-        $.getScript(`${base_url}/js/lib/colors.min.js`, function () {
-            let $arr_color = $c.name2rgb(options.background.filter).a;
-            $arr_color.push(options.background.opacity);
-            $rgba = $arr_color.join(', ');
-            $app.css('background-color', `rgba(${$rgba})`);
-        });
+        // $.getScript( `js/lib/colors.min.js` , function() {
+        //     console.log( $c );
+        //     let $arr_color = $c.name2rgb(options.background.filter).a;
+        //     $arr_color.push(options.background.opacity);
+        //     $rgba = $arr_color.join(', ');
+        //     $app.css('background-color', `rgba(${$rgba})`);
+        // });
+        console.log(cc('#111111'));
+        // let col = w3color(options.background.opacity);
+        // console.log( col, col.toRgbaString() );
     }
 }
 

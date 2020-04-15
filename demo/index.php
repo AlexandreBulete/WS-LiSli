@@ -15,7 +15,8 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 
-    <script src="es2015/lightbox.js" defer></script>
+    <script src="js/lightbox.js" type="module"></script>
+    <!-- <script src="es2015/lightbox.js" type="module"></script> -->
 </head>
 <body>
     <?php require 'data.php'; ?>
@@ -60,7 +61,7 @@
                 bg : 'none'
             },
             background : {
-                filter : 'image',
+                filter : 'black',
                 opacity : .5
             },
             display_velocity : 'low',

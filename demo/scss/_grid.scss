@@ -11,9 +11,13 @@
         padding: 0;
         margin-bottom: 10px;
         transition: all .5s ease;
+        position: relative;
         &:hover {
             cursor: pointer;
             transform: scale(1.025);
+        }
+        .img--container {
+            // your ::before style inside this element
         }
         img {
             width: 100%;
