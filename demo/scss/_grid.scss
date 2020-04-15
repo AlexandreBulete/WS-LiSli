@@ -17,7 +17,8 @@
             transform: scale(1.025);
         }
         .img--container {
-            // your ::before style inside this element
+            line-height: 0;
+            // here your ::before style inside this element
         }
         img {
             width: 100%;

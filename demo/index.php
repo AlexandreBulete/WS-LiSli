@@ -15,7 +15,7 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 
-    <script src="js/lightbox.js" type="module"></script>
+    <script src="js/ws-lisli.js" type="module"></script>
     <!-- <script src="es2015/lightbox.js" type="module"></script> -->
 </head>
 <body>

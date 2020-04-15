@@ -95,7 +95,7 @@ function bgStyle($app, options, base_url) {
         //     $rgba = $arr_color.join(', ');
         //     $app.css('background-color', `rgba(${$rgba})`);
         // });
-        console.log( cc('#111111') )
+        // console.log( cc('#111111') )
         // let col = w3color(options.background.opacity);
         // console.log( col, col.toRgbaString() );
     }

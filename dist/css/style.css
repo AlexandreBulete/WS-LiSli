@@ -19,6 +19,8 @@ ul, li {
     .grid li:hover {
       cursor: pointer;
       transform: scale(1.025); }
+    .grid li .img--container {
+      line-height: 0; }
     .grid li img {
       width: 100%; }
 
